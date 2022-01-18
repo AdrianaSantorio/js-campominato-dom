@@ -18,28 +18,19 @@ const button = document.getElementById('play');
 const grid = document.getElementById('grid');
 const bombsTotal = 16;
 
-
-
-
-//funzioni
-
-//funzione getrandomnumber
-function getRandomNumber (min, max) {
-    Math.floor(Math.Random() * (max  - min + 1) + min);
-}
-
-
-//funzione generate bombs
- //trovare 16 numeri casuali che non si ripetano
- 
-
-
 //funzione play
 function play () {
+    //sovrascrivere il bottone
     button.innerText='RICOMINCIA';
+    
+    //pulire la griglia
     grid.innerHTML='';
+
+    //recuperare il valore di difficoltà
     const difficulty = document.getElementById('difficulty').value;
     console.log(difficulty);
+    
+    //ricavare dal valore di difficoltà il numero di celle
     let cellsTotal;
 
     switch (difficulty) {
@@ -54,12 +45,35 @@ function play () {
     }
     console.log(cellsTotal);
 
+    //preparare la variabile che tiene il punteggio
     let points= 0;
 
+    //ricavare il numero massimo di punti ottenibili
     const maxPoints = cellsTotal - bombsTotal;
     console.log(maxPoints);
-         
-}
+    
+    //funzione getrandomnumber
+    function getRandomNumber (min, max) {
+       return Math.floor(Math.random() * (max  - min + 1) + min);
+    }
+
+    //funzione generate bombs
+    function generateBombs (totalbombs, totalnumber) {
+        const bombs = [];
+        while (bombs.length < totalbombs) {
+            const bomb = getRandomNumber(1, totalnumber);
+            console.log(bomb);
+            if (!bombs.includes(bomb)) {
+                bombs.push(bomb);
+            }
+        }
+        return bombs;
+    }
+
+    //generare i numeri delle bombe
+    const bombs = generateBombs(bombsTotal, cellsTotal);
+    console.table(bombs);
+};
 
 //eventlistener - play
 
