@@ -16,7 +16,10 @@ BONUS:
 //elementi recuperati
 const button = document.getElementById('play');
 const grid = document.getElementById('grid');
-const bombTotal = 16;
+const bombsTotal = 16;
+
+
+
 
 //funzioni
 function play () {
@@ -24,7 +27,20 @@ function play () {
     grid.innerHTML='';
     const difficulty = document.getElementById('difficulty').value;
     console.log(difficulty);
+    let cellsTotal;
 
+    switch (difficulty) {
+        case 'easy':
+            cellsTotal = 100;
+            break;
+        case 'hard':
+            cellsTotal = 49;
+            break;
+        case 'normal':
+            cellsTotal = 81;
+    }
+    console.log(cellsTotal);
+         
 }
 
 //eventlistener - play
