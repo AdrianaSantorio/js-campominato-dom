@@ -40,6 +40,11 @@ function play () {
             cellsTotal = 81;
     }
     console.log(cellsTotal);
+
+    let points= 0;
+
+    const maxPoints = cellsTotal - bombsTotal;
+    console.log(maxPoints);
          
 }
 
