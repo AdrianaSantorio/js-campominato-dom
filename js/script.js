@@ -16,12 +16,15 @@ BONUS:
 //elementi recuperati
 const button = document.getElementById('play');
 const grid = document.getElementById('grid');
-
+const bombTotal = 16;
 
 //funzioni
 function play () {
     button.innerText='RICOMINCIA';
     grid.innerHTML='';
+    const difficulty = document.getElementById('difficulty').value;
+    console.log(difficulty);
+
 }
 
 //eventlistener - play
