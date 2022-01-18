@@ -13,10 +13,15 @@ BONUS:
 2- quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle
 */
 
+//elementi recuperati
 const button = document.getElementById('play');
+const grid = document.getElementById('grid');
 
+
+//funzioni
 function play () {
     button.innerText='RICOMINCIA';
+    grid.innerHTML='';
 }
 
 //eventlistener - play
