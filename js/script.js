@@ -24,8 +24,15 @@ const bombsTotal = 16;
 //funzioni
 
 //funzione getrandomnumber
+function getRandomNumber (min, max) {
+    Math.floor(Math.Random() * (max  - min + 1) + min);
+}
+
 
 //funzione generate bombs
+ //trovare 16 numeri casuali che non si ripetano
+ 
+
 
 //funzione play
 function play () {
