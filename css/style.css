@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 30px;
+    background-color: blanchedalmond;
+}
+
+/* main */
+
+main {
+    background-color: rgb(27, 49, 88);
+    padding: 50px;
+    text-align: center;
+}
+
+#play {
+    background-color: cornflowerblue;
+    padding: 5px 10px;
+}
+
+#grid {
+    height: 800px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid cornflowerblue;
+    margin:  30px auto;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid cornflowerblue;
+    color: white;
+    font-size: larger;
+}
