@@ -12,3 +12,14 @@ BONUS:
 1- quando si clicca su una bomba e finisce la partita, il software scopre tutte le bombe nascoste
 2- quando si clicca su una bomba e finisce la partita, evitare che si possa cliccare su altre celle
 */
+
+const button = document.getElementById('play');
+
+function play () {
+    button.innerText='RICOMINCIA';
+}
+
+//eventlistener - play
+
+button.addEventListener('click', play);
+
