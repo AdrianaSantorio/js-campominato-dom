@@ -22,6 +22,12 @@ const bombsTotal = 16;
 
 
 //funzioni
+
+//funzione getrandomnumber
+
+//funzione generate bombs
+
+//funzione play
 function play () {
     button.innerText='RICOMINCIA';
     grid.innerHTML='';
