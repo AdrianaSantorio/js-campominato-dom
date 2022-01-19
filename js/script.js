@@ -32,6 +32,7 @@ function play () {
     
     //ricavare dal valore di difficoltà il numero di celle
     let cellsTotal;
+    let rowsAndColumns;
 
     switch (difficulty) {
         case 'easy':
@@ -44,6 +45,11 @@ function play () {
             cellsTotal = 81;
     }
     console.log(cellsTotal);
+
+    //numero file/colonne
+
+    rowsAndColumns = Math.sqrt(cellsTotal);
+    console.log(rowsAndColumns);
 
     //preparare la variabile che tiene il punteggio
     let points= 0;
@@ -62,7 +68,6 @@ function play () {
         const bombs = [];
         while (bombs.length < totalbombs) {
             const bomb = getRandomNumber(1, totalnumber);
-            console.log(bomb);
             if (!bombs.includes(bomb)) {
                 bombs.push(bomb);
             }
@@ -70,9 +75,40 @@ function play () {
         return bombs;
     }
 
+    //funzione createCell
+
+    function generateCell () {
+        const cell = document.createElement('div');
+        cell.className = 'cell'; 
+        return cell;
+    }
+    
+    //funzione generateGrid
+
+    function generateGrid (totalnumber, cellsPerRow, bombs) {
+        const cell = generateCell();
+        
+        for (let i = 1; i < totalnumber + 1; i++) {
+            cell.id = i;
+            cell.innerText = i;
+            cell.style.length
+            cell.addEventListener('click'{
+
+            });
+            grid.appendChild(cell);
+        }
+        
+    }
+    
+    //*esecuzione
+
     //generare i numeri delle bombe
     const bombs = generateBombs(bombsTotal, cellsTotal);
     console.table(bombs);
+
+    //generare la griglia
+    
+
 };
 
 //eventlistener - play
